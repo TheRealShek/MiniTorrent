@@ -1,3 +1,3 @@
-module main.go
+module minitorrent
 
-go 1.24.4
+go 1.21

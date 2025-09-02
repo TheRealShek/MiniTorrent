@@ -41,3 +41,17 @@ type PieceResult struct {
 	Index int
 	Data  []byte
 }
+
+// Info represents the info dictionary from torrent file
+type Info struct {
+	Name        string `bencode:"name"`
+	Length      int    `bencode:"length"`
+	PieceLength int    `bencode:"piece length"`
+	Pieces      string `bencode:"pieces"`
+}
+
+// BencodeData represents the raw torrent file structure
+type BencodeData struct {
+	Announce string `bencode:"announce"`
+	Info     Info   `bencode:"info"`
+}
